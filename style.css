@@ -1,0 +1,265 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+--Pale-blue: hsl(225, 100%, 94%);
+--Bright-blue: hsl(245, 75%, 52%);
+--Very-pale-blue: hsl(225, 100%, 98%);
+--Desaturated-blue: hsl(224, 23%, 55%);
+--Dark-blue: hsl(223, 47%, 23%);
+}
+
+
+
+body {
+  
+  background-color:var(--Pale-blue);
+  background-image: url(../images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  max-width: 327px;
+  background-color: white;
+  border-radius: 2rem;
+  margin:1rem
+}
+
+.hero-photo {
+  height: 160px;
+  border-radius: 2rem 2rem 0 0;
+  object-fit:cover;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.down-col {
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.title {
+margin-block-start: 2rem;
+margin-block-end: 1rem;
+color: var(--Dark-blue);
+font-size: 1.375rem;
+font-weight: 900;
+}
+
+.description {
+  color:var(--Desaturated-blue);
+  margin-block-end: 1.5rem;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block-end: 1.5rem;
+  background-color: var(--Very-pale-blue);
+  border-radius: 11px;
+  padding: 1rem;
+  flex:1
+}
+
+.music-icon{
+  margin-inline-end: 20px;
+}
+
+.type-and-price {
+margin-right:auto;}
+
+.type-of-plan {
+  color: var(--Dark-blue);
+  font-size: 0.875rem;
+  font-weight: 900;
+}
+
+.price-of-plan {
+  color: var(--Desaturated-blue);
+  font-size: 0.875rem;
+}
+
+.change-plan {
+  color: var(--Bright-blue);
+  text-decoration: underline;
+  font-weight: 900;
+  font-size: 0.825rem;
+}
+
+.change-plan:hover {
+color: #766CF1;
+text-decoration: none;
+}
+
+.payment {
+  display: block;
+  color:white;
+  background-color: var(--Bright-blue);
+  padding: 0.9375rem;
+  border-radius: 11px;
+  margin-block-end: 24px;
+  font-weight: 900;
+  box-shadow: 00px 4px 4px  #00000036 , 0px 20px 20px 0px  #392ae133;
+}
+
+.payment:hover {
+  background-color: #766CF1;
+}
+
+.cancel-order {
+  background-color: transparent;
+  border: none;
+  color: var(--Desaturated-blue);
+  margin-block-end: 2rem;
+  font-weight: 900;
+  font-size: 0.9375rem;
+}
+
+.cancel-order:hover {
+color:#1F2E55;
+}
+
+
+
+@media screen and (min-width:64rem) {
+
+  body{
+  background-color:var(--Pale-blue);
+  background-image: url(../images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+  .wrapper{
+    max-width: 450px;
+  }
+
+  .hero-photo {
+    width:100%;
+    height: 220px;
+    border-radius: 2rem 2rem 0 0;
+  }
+
+  .down-col {
+    padding: 0 3rem;
+    text-align: center;
+  }
+  
+
+
+
+  /*MARGINS*/
+  
+  .title {
+    margin-block-start: 2.8125rem;
+    margin-block-end: 1.0625rem;
+    font-size:1.75rem;
+}
+
+  .description {
+    margin-block-end: 1.25rem;
+    font-size:1rem;
+  }
+
+  .flex-container {
+    display: flex;
+    margin-block-end: 2rem;
+    padding:1rem;
+  }
+
+  .payment { 
+    margin-block-end: 2rem;
+  }
+
+  .cancel-order {
+    margin-block-end: 3rem;
+  }
+  }
